@@ -1,0 +1,45 @@
+<div class="pl-3 pb-2">
+<h1>Emails</h1>
+<%= button_to emails_path(@email), remote: true, method:"post" do%>
+<i class="fa fa-envelope-o"></i>
+<% end %>
+</div>
+
+<div class="row" style="width: 100%">
+
+    <div class="col-md-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Effacer</th>
+                    <th scope="col">Liste des emails</th>
+                </tr>
+            </thead>
+            <tbody id="emails">
+                <% @emails.each do |email| %>
+                <tr>
+                    <td id="<%= email.id %>">
+                        <%= button_to email_path(email), method:"delete", remote: true do%><i class="fa fa-trash"></i>
+                        <% end %>
+                    </td>
+                    <td id="<%= email.id %>" class="<% email.read %>">
+                        <%= link_to "#{email.object}", email_path(id: email.id, read: true), { :remote => true, class: "#{email.object} #{email.read}" }%>
+                    </td>
+                </tr>
+                <%end%>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-9">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width: 70%" scope="col">Email sélectionné</th>
+                </tr>
+            </thead>
+            <tbody id=email_content>
+            </tbody>
+        </table>
+    </div>
+</div>

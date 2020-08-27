@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p class="text-center my-2 font-weight-bold"><%= email.object %></p>
+      <p><%= email.body %></p>
+      <div class="text-center">
+        <%= link_to "Supprimer", email_path(email.id), class:"btn btn-outline-danger mr-2", data:{method: "delete"}, remote: true %>
+        <%= link_to "Marquer comme non-lu", email_path(email.id), id:"btn-read", class:"btn btn-outline-success", data:{method: "put"}, remote: true %>
+      </div>
+    </div>
+  </div>
+</div>

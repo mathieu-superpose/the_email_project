@@ -1,0 +1,5 @@
+document.getElementById('email_content').innerHTML = "";
+document.getElementById('email_content').insertAdjacentHTML("beforeend", "<%= j render 'show', email: @email %>");
+document.getElementById('<%= @email.id %>').classList.remove("list-group-item-secondary");
+document.getElementsByClass('true').style.fontWeight = "1000";
+document.getElementsByClass('false').style.fontWeight = "";

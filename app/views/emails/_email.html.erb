@@ -1,0 +1,11 @@
+<tr>
+    <td>
+        <%= button_to email_path(email), method:"delete", remote: true do%><i class="fa fa-trash"></i>
+        <% end %>
+    </td>
+    <td>
+        <a href="<%email_path(email.id)%>">
+            <%= email.object  %></a>
+    </td>
+    
+</tr>
