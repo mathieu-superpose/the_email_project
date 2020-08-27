@@ -10,6 +10,8 @@ _gmail version toto_
 
 Appli email rudimentaire sous rails.
 
+https://the-email-project.herokuapp.com/
+
 ## Créateur
 
 - [:camel: Mathieu JOLY](https://github.com/mathieu-superpose)
